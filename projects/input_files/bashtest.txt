@@ -1,0 +1,1 @@
+To move a file into a directory using the mv command pass the name of the file and then the directory. In the following example the file foo.txt is moved into the directory bar.

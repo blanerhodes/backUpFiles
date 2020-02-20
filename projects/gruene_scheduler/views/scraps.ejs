@@ -1,0 +1,203 @@
+<% include ./partials/header %>
+
+<table class="ui celled table">
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+        <th>Sunday</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Day">Band</td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+        <tr>
+            <td data-label="Day"></td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+        <tr>
+            <td data-label="Day"></td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+        <tr>
+            <td data-label="Day"></td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+        <tr>
+            <td data-label="Day"></td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+        <tr>
+            <td data-label="Day"></td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+        <tr>
+            <td data-label="Day"></td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+        <tr>
+            <td data-label="Day"></td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+        <tr>
+            <td data-label="Day"></td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+        <tr>
+            <td data-label="Day"></td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+        <tr>
+            <td data-label="Day"></td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+        <tr>
+            <td data-label="Day"></td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+        <tr>
+            <td data-label="Day"></td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+        <tr>
+            <td data-label="Day"></td>
+            <td data-label="Monday"></td>
+            <td data-label="Tuesday"></td>
+            <td data-label="Wednesday"></td>
+            <td data-label="Thursday"></td>
+            <td data-label="Friday"></td>
+            <td data-label="Saturday"></td>
+            <td data-label="Sunday"></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <!-- function setAvailability() {
+                    let avail = "";
+                    <% let weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]; %>
+                    <% for(let day=0; day<weekdays.length; day++){ %>
+                        if(employee.availability[weekdays[day].toLowerCase()][0]==0){
+                            var avail = "Unavailable";
+                        } else if(employee.availability[weekdays[day].toLowerCase()][0]==1) {
+                            var avail = "Available";
+                        } else {
+                            var startTime = employee.availability[weekdays[day].toLowerCase()][0];
+                            var endTime = employee.availability[weekdays[day].toLowerCase()][1];
+                        }
+                        return []    
+                } -->
+
+                function go(content) {
+
+                    delimiter=","   // comma but you can set any character here.
+                
+                    phones=content.split(delimiter);
+                
+                    //  now the phones of the textbox are in an array with separate values.
+                
+                    phones.forEach(function(value, index) {   
+                        //  Here you can handle each item.
+                        //
+                        //  Example:
+                        document.write('item: ' + phones[index] + '<br>');    
+                    });
+                
+                    //  you can submit the form from here, or whatever you want.
+                
+                }
+
+                <div class="field"> 
+                        <div class="ui calendar" id="standard_calendar">
+                            <label>Add a Vacation Request</label>
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input type="text" placeholder="Date/Time" name="employee[vacation]">
+                            </div>
+                        </div>
+                    </div>
+<% include ./partials/footer %>

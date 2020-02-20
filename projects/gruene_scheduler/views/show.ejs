@@ -1,0 +1,81 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= employee.name %></div>
+    <div class="ui top attached">
+        <div class="content">
+            <div class="summary">
+                <h4 class="ui sub header">Positions</h4>
+                <% function capFirstLetter(string) { %>
+                    <% return string.charAt(0).toUpperCase() + string.slice(1); %>
+                <% } %>
+                <ul>
+                    <%for (let prop in employee.positions) { %>
+                        <%if (employee.positions.hasOwnProperty(prop) && prop != "$init") {%>
+                            <% if(employee.positions[prop].canWork === "on") { %>
+                                <li><%= capFirstLetter(prop.toLowerCase()) %> | Competency: <%= employee.positions[prop].competency %></li>
+                            <% } %>
+                        <% }} %>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="summary">
+                <h4 class="ui sub header">Availability</h4>
+                <ul>
+                <% let empAvail = employee.availability; %>
+                <% let hoursArray = []; %>
+                <% for(let prop in empAvail) { %>
+                    <% if(empAvail.hasOwnProperty(prop) && prop != "$init") { %> 
+                        <% if(empAvail[prop][0] === "0") { %>
+                            <li><%= capFirstLetter(prop) %>: Unavailable</li>
+                        <% } else if(empAvail[prop][0] === "1") { %>
+                            <li><%= capFirstLetter(prop) %>: Fully Available</li>
+                        <% } else { %>
+                            <% empAvail[prop].forEach(function(element) { %>
+                                <% if(element === "on") { %>
+                                    <% return; %>
+                                <% } else if(Number(element) <= 12) { %>
+                                    <% hoursArray.push(element + "AM"); %>
+                                <% } else { %>
+                                    <% hoursArray.push((Number(element)-12) + "PM"); %>
+                                <% } %>
+                            <% }) %>
+                            <li><%= capFirstLetter(prop) %>: Available <%=hoursArray[0]%> - <%=hoursArray[1]%></li>
+                        <% } %>
+                    <% } %>           
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="summary">
+                <h4 class="ui sub header">Hours Information</h4>
+                <ul>
+                    <li>Hours Worked: <%= employee.hours.current %></li>
+                    <li>Minimum Hours: <%= employee.hours.min %></li>
+                    <li>Maximum Hours: <%= employee.hours.max %></li>
+                </ul>
+            </div>
+        </div>
+        <h3 class="ui dividing header">Current Vacation Requests</h3>
+        <ul>
+        <% if(employee.vacation.length===1) { %>
+            <li>None</li>
+        <% } else { %>
+            <% for (let date=0; date<employee.vacation.length-1; date++){ %>
+                    <li><%= employee.vacation[date] %></li>
+            <% } %> 
+        <% } %>    
+        </ul>   
+        <a class="ui orange basic button" href="/employees/<%= employee._id %>/edit">Edit General Information</a>
+        <a class="ui blue basic button" href="/employees/<%= employee._id %>/vacation">Edit Vacation Dates</a>
+        <form id="delete" action="/employees/<%= employee._id %>?_method=DELETE" method="POST">
+            <button class="ui red basic button">Delete</button>
+        </form>
+        <a class="ui black basic button" href="/employees">Go Back</a>
+    </div>
+</div>
+
+<% include ./partials/footer %>
+

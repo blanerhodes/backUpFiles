@@ -1,0 +1,2 @@
+ins (will open newly made file in vim)
+# view 

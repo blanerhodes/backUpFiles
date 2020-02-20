@@ -1,0 +1,7 @@
+Number of Novels Authored
+Author name
+Number of novels
+Ernest Hemingway 9
+Ernest Hemingway9
+Ernest Hemingway,9
+-1

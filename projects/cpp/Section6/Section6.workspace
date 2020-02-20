@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Section6" Database="" Version="10.0.0">
+  <Project Name="lenghtWidthProgram" Path="lenghtWidthProgram/lenghtWidthProgram.project" Active="No"/>
+  <Project Name="sizeOfProgram" Path="sizeOfProgram/sizeOfProgram.project" Active="No"/>
+  <Project Name="constantsRoomProgram" Path="constantsRoomProgram/constantsRoomProgram.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="lenghtWidthProgram" ConfigName="Debug"/>
+      <Project Name="sizeOfProgram" ConfigName="Debug"/>
+      <Project Name="constantsRoomProgram" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="lenghtWidthProgram" ConfigName="Release"/>
+      <Project Name="sizeOfProgram" ConfigName="Release"/>
+      <Project Name="constantsRoomProgram" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

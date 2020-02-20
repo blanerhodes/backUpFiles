@@ -1,0 +1,58 @@
+<% include ./partials/header %>
+<table class="ui definition table">
+    <thead>
+      <tr>
+        <th>Gruene Hall Weekly Schedule</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>DATE</td>
+            <!-- logic for looping dates -->
+        </tr>
+        <tr>
+            <td>DAY</td>
+            <% let weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]; %>
+            <% for(let day=0; day<weekdays.length; day++){ %>
+                <td><%= weekdays[day] %></td>
+            <% } %>
+        </tr>
+        <tr>
+            <td>BAND</td>
+            <!-- logic for looping bands -->
+        </tr>
+        <tr>
+            <td>MAIN SCHEDULE</td>
+        </tr>
+        <tr>
+            <td>8:00 AM</td>
+        </tr>
+        <tr>
+            <td>9:00 AM</td>
+        </tr>
+        <tr>
+            <td>1:00 PM</td>
+        </tr>
+        <tr>
+            <td>5:00 PM</td>
+        </tr>
+        <tr>
+            <td>6:00 PM</td>
+        </tr>
+        <tr>
+            <td>7:00 PM</td>
+        </tr>
+        <tr>
+            <td>8:00 PM</td>
+        </tr>
+        <tr>
+            <td>9:00 PM</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+<% include ./partials/footer %>

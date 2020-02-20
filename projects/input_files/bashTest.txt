@@ -1,0 +1,2 @@
+I realize I could do ls > filename.txt to create a file (filename.txt) with those contents; I'd then have to open or print the file and manually select and copy the text block (which can be annoying/tedious.) I clearly could also select and copy the output of ls directly from within the terminal window.
+

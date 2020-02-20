@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="section12" Database="" Version="10.0.0">
+  <Project Name="pointerFutz" Path="pointerFutz/pointerFutz.project" Active="No"/>
+  <Project Name="section12challenge" Path="section12challenge/section12challenge.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="pointerFutz" ConfigName="Debug"/>
+      <Project Name="section12challenge" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="pointerFutz" ConfigName="Release"/>
+      <Project Name="section12challenge" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

@@ -1,0 +1,103 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.2/dist/semantic.min.js"></script>
+</head>
+<body>
+
+<div class="ui main text container segment">
+    <div class="ui top attached">
+    <div class="content">
+        <div class="summary">
+            <h4 class="ui sub header">Employees, Update Preferences/Availabilty if Necessary</h4>
+            <div class="ui link list">
+                <% employees.forEach( (employee) => { %>
+                    <li><span class="ui large black text"><a class="item" href="/employees/<%= employee._id %>"><%= employee.name %></a></span></li>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="ui main text container segment">
+        <form class="ui form" action="/week" method="POST">
+            <div class="ui top attached">
+            <div class="content">
+                <div class="summary">
+                    <h4 class="ui sub header">Mark Day Template to Use</h4>
+                    <div class="fields">
+                    <% let weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]; %>
+                    <% for(let day=0; day<weekdays.length; day++){ %>
+                        <% if(day<4) { %>
+                            <div class="field">
+                                <label><%= weekdays[day] %></label>
+                                <select class="ui selection dropdown" name="week[<%= weekdays[day].toLowerCase() %>][degOfBusy]">
+                                    <option value="0">Standard</option>
+                                    <option value="1">Busy</option>
+                                </select>
+                            </div>
+                        <% } else if(day == 4) { %>
+                            </div>
+                            <div class="fields">
+                                <div class="field">
+                                    <label><%= weekdays[day] %></label>
+                                    <select class="ui selection dropdown" name="week[<%= weekdays[day].toLowerCase() %>][degOfBusy">
+                                        <option value="0">Standard</option>
+                                        <option value="1">Busy</option>
+                                    </select>
+                                </div>
+                        <% } else if(day < 6) { %>
+                            <div class="field">
+                                <label><%= weekdays[day] %></label>
+                                <select class="ui selection dropdown" name="week[<%= weekdays[day].toLowerCase() %>][degOfBusy]">
+                                    <option value="0">Standard</option>
+                                    <option value="1">Busy</option>
+                                </select>
+                            </div> 
+                        <% } else { %>
+                            <div class="field">
+                                <label><%= weekdays[day] %></label>
+                                <select class="ui selection dropdown" name="week[<%= weekdays[day].toLowerCase() %>][degOfBusy]">
+                                    <option value="0">Standard</option>
+                                    <option value="1">Busy</option>
+                                    <option value="2">Brunch</option>
+                                </select>
+                            </div>
+                        <% } %>
+                    <% } %>
+                    <div class="field">
+                        <label>Week Start Date</label>
+                        <input type="date" name="week[monday][date]">
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <input class="ui violet basic button" type="submit">
+        </form>
+    </div>
+
+
+
+<button class="ui primary button" onclick="window.location='/employees/new';">Add New Employee</button>
+<button class="ui primary button" onclick="window.location='/employees/new';">Bands</button>
+<button class="ui primary button" onclick="window.location='/schedule';">Go to Schedule Creation</button>
+
+<!-- make sure to put an "are you sure" prompt -->
+<button id="genBtn" class="ui primary button">Generate Schedule</button>
+
+<script>
+$('.ui.dropdown').dropdown();
+</script>
+<script>
+    $('#genBtn').on('click', function(){
+        $.get("/generate");
+        });
+</script>
+<% include ./partials/header %>

@@ -1,0 +1,5 @@
+Loop over all files in db, grabbing the year in each doc name
+Loop over all names in (firstName,gender,frequency) and map the names/gender to frequency ?array?
+Get the top ten names from this mapping for each year
+Get year of birth estimation by only using top ten results from earlier?
+	May have to keep all names on hand in case it was never a top ten (proba bly this)
